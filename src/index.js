@@ -1,3 +1,4 @@
+import home from "./home";
 import food from "./food";
 
 (function start() {
@@ -68,28 +69,33 @@ import food from "./food";
       let classname = event.target.closest("button").className;
 
       if (classname === "home") {
-        this.activeTab.home = 1;
-        home.bind(this);
-        console.log(this.activeTab.food);
-      } else if (classname === "food") {
-        this.activeTab.food = 1;
-        console.log(this.activeTab.food);
-        food(this);
+        if(this.activeTab.home===0){
+          this.clearPage();
+          this.setActive('home');
+          home();
+        }
+      } 
+      else if (classname === "food") {
+        if(this.activeTab.food===0){
+          this.clearPage();
+          this.setActive("food"); 
+          food(this);
+        }
       }
     },
 
-    //reset activeTabs(class)
-
-    //this.activeTab.home = 0, .food = 0 etc
-    //this.activeTab.class = 1
-
-
-    //clear page()
+    setActive: function(selected){ 
+        
+        this.activeTab.home = 0;
+        this.activeTab.smoothies = 0;
+        this.activeTab.food = 0;
+        this.activeTab.contact = 0;
+        this.activeTab[selected] = 1;
+    },
+    clearPage: function(){
+     document.querySelectorAll("foodcard").forEach(e => e.parentNode.removeChild(e));
+     },
+   
   };
-
   display.init();
 })();
-
-function home() {
-  console.log("home");
-}
