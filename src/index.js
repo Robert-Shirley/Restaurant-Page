@@ -72,7 +72,7 @@ import food from "./food";
         if(this.activeTab.home===0){
           this.clearPage();
           this.setActive('home');
-          home();
+          home(this);
         }
       } 
       else if (classname === "food") {
@@ -93,6 +93,7 @@ import food from "./food";
         this.activeTab[selected] = 1;
     },
     clearPage: function(){
+     document.querySelectorAll("homecard").forEach(e => e.parentNode.removeChild(e));
      document.querySelectorAll("foodcard").forEach(e => e.parentNode.removeChild(e));
      },
    
