@@ -1,5 +1,7 @@
 import home from './home';
 import food from './food';
+import drink from './drinks';
+import contact from './contact';
 
 (function start() {
   let display = {
@@ -69,7 +71,11 @@ import food from './food';
 
     tabSwitch: function (event) {
       let classname = event.target.closest('button').className;
-
+      let elems = document.querySelectorAll(".underline");
+        [].forEach.call(elems, function(el) {
+        el.classList.remove("underline");
+        });
+      event.target.closest('button').classList.add('underline');
       if (classname === 'home') {
         if (this.activeTab.home === 0) {
           this.clearPage();
@@ -83,6 +89,20 @@ import food from './food';
           food(this);
         }
       }
+      else if (classname === 'drink') {
+        if (this.activeTab.smoothies === 0) {
+          this.clearPage();
+          this.setActive('smoothies');
+          drink(this);
+        }
+      }
+      else if (classname === 'contactUs') {
+        if (this.activeTab.contact === 0) {
+          this.clearPage();
+          this.setActive('contact');
+          contact(this);
+        }
+      }
     },
 
     setActive: function (selected) {
@@ -91,7 +111,7 @@ import food from './food';
       this.activeTab.food = 0;
       this.activeTab.contact = 0;
       this.activeTab[selected] = 1;
-    },
+       },
     clearPage: function () {
       document
         .querySelectorAll('img')
@@ -102,6 +122,14 @@ import food from './food';
       document
         .querySelectorAll('foodcard')
         .forEach((e) => e.parentNode.removeChild(e));
+        document
+        .querySelectorAll('drinkcard')
+        .forEach((e) => e.parentNode.removeChild(e));
+        document
+        .querySelectorAll('contactcard')
+        .forEach((e) => e.parentNode.removeChild(e));
+        
+        
     }
   };
   display.init();
