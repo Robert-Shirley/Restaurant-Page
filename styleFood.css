@@ -6,6 +6,14 @@ justify-content: center;
 align-content: center;
 }
 
+.contactCard{
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
 .pics{
     margin-left: 20px;
     margin-bottom: 50px;
@@ -13,6 +21,19 @@ align-content: center;
     min-width: 100%;
     min-height: 100%;
     border: 3px solid #555;
+}
+
+.map{
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    flex-shrink: 0;
+    max-width: 50%;
+    max-height: 50%;
+    border: 3px solid #555;
+    align-content: center;
+    justify-content: center;
 }
 
 .imgFood{
@@ -28,6 +49,14 @@ align-content: center;
 }
 
 .foodCard
+{   margin-left:40px;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 50px;
+}
+
+.drinkCard
 {   margin-left:40px;
     font-size: 30px;
     display: grid;
