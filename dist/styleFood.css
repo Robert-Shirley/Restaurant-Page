@@ -1,5 +1,42 @@
 .homeCard1{
+    font-family: 'Caveat', cursive;
+    font-size: x-large;
 display: flex;
 justify-content: center;
 align-content: center;
+}
+
+.pics{
+    margin-left: 20px;
+    margin-bottom: 50px;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    border: 3px solid #555;
+}
+
+.imgFood{
+    flex-shrink: 0;
+    max-width: 200px;
+   max-height: 200px;
+   min-width: 200px;
+   min-height: 200px;
+    border: 3px solid transparent;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.foodCard
+{   margin-left:40px;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 50px;
+}
+
+h2
+{margin-top: 40px;
+margin-left: 20px;
+
 }

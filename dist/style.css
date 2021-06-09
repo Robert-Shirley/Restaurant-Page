@@ -1,9 +1,23 @@
+
+
+body
+{     font-family: 'Caveat', cursive;
+    background-image: url('images/Vaq56r.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+
+
 .rest-name
 {   grid-area: h1;
     display: flex;
     align-content: center;
     justify-content: center;
-    font-size: 80px;
+    font-size: 90px;
+    font-family: 'Caveat', cursive;
 }
 .rest-name:hover{
     transform: none;
@@ -36,7 +50,8 @@ rightMargin{
 
 
 button{
-    font-size: x-large;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
     margin-top: 10px;
     width: auto;
     margin-right: auto;
@@ -53,10 +68,13 @@ button:hover{
 }
 
 .pageContent{
+    font-family: 'Caveat', cursive;
     grid-area: PC;
+
 }
 
 #content{
+    font-family: 'Caveat', cursive;
     display: grid;
     grid-template-columns: 1fr auto auto auto auto 1fr;
     grid-template-rows: auto;
@@ -65,3 +83,4 @@ button:hover{
     "LM home drink food Cont RM"
     "LM PC PC PC PC RM";
 }
+
